@@ -1,0 +1,615 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: pageTransition 0.5s ease-in-out;
+}
+
+.modal,
+.writing,
+.writing_success,
+.CommunityModal {
+    display: none;
+}
+
+.main {
+    width: 1200px;
+    height: 860px;
+}
+header{
+    position: relative;
+    width: 1200px;
+    height: 60px;
+    background-color: #555555;
+}
+
+.headerlogo{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+}
+
+.headerlogo img{
+    width: 55px;
+    height: 60px;
+}
+
+.menu{
+    width: 500px;
+    height: 60px;
+    float: left;
+}
+.navi>li{
+    width: 120px;
+    height: 60px;
+    float: left;
+    margin-left: 30px;
+    margin-right: 70px;
+    border-left: solid 1px rgb(152, 152, 152);
+    border-right: solid 1px rgb(152, 152, 152);
+}
+.navi>li>a{
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: yellow;
+}
+.navi>li>a:hover{
+    opacity: 0.7;
+}
+.submenu{
+    z-index: 2;
+    display: none;
+    position: relative;
+}
+.submenu>li{
+    width: 180px;
+    height: 40px;
+}
+.submenu>li>a{
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(180, 180, 180);
+    color: black;
+    opacity: 0.9;
+}
+.submenu>li>a:hover{
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.lastsubmenu a{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.login{
+    width: 100px;
+    height: 25px;
+    float: right;
+    margin-right: 5px;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 25px;
+    color: black;
+    background-color: gold;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.login:hover {
+    scale: 1.1;
+}
+
+.logout{
+    width: 100px;
+    height: 25px;
+    float: right;
+    margin-right: 5px;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 25px;
+    color: black;
+    background-color: gold;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.logout:hover {
+    scale: 1.1;
+}
+
+.bodywrap{
+    width: 1200px;
+    height: 750px;
+}
+.imgslide{
+    width: 700px;
+    height: 400px;
+    position: relative; 
+    float: right;
+}
+.imgslide>a{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.notice{
+    width: 500px;
+    height: 400px;
+    float: right;
+    background-color: #222222;
+}
+.notice h3{
+    color: white;
+    background-color: #444444;
+    text-align: center;
+}
+.notice li{
+    width: 500px;
+    height: 40px;
+    
+}
+.notice li>a{
+    line-height: 40px;
+    margin-left: 5px;
+    color: white;
+}
+.notice li>a:hover{
+    font-weight: bold;
+}
+.notice span{
+    margin-right: 5px;
+    float: right;
+}
+.notice li:nth-child(2n){
+    background-color: darkgoldenrod;
+}
+.contents{
+    width: 1200px;
+    height: 350px;
+    position: relative;
+    float: left;
+}
+.community{
+    width: 700px;
+    height: 350px;
+    float: left;
+    background-color: #222222
+}
+.community>h3{
+    background-color: #444444;
+    color: white;
+    text-align: center;
+}
+.community li{
+    width: 700px;
+    margin-top: 5px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+}
+.community li:hover{
+    font-weight: bold;
+}
+
+.community li:nth-child(2n){
+    background-color: darkgoldenrod;
+}
+
+.community_btn{
+    position: absolute;
+    bottom: 20px;
+    width: 60px;
+    text-align: center;
+    margin-left: 20px;
+    color: black;
+    background-color: gold;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.community_btn:hover{
+    opacity: 0.7;
+}
+
+.communityList{
+    background-color: gray;
+    color: white;
+}
+
+.communityList:nth-child(n1){
+    background-color: gold;
+    color: black;
+}
+
+#CommunityList{
+    color: white;
+}
+
+.listTitle{
+    float: left;
+    text-overflow: ellipsis ellipsis;
+}
+
+.listDay{
+    float: right;
+}
+
+#none{
+    display: none;
+}
+
+#secret{
+    display: none;
+}
+
+.download{
+    width: 500px;
+    height: 350px;
+    float: left;
+    position: relative;
+}
+.downloadlist{
+    width: 500px;
+    height: 350px;
+    float: right;    
+}
+.downloadlist img{
+    z-index: 1;
+}
+.downloadlist>li{
+    width: 166.67px;
+    height: 30px;
+    float: left;
+}
+.downloadlist>li>a{
+    width: 166.67px;
+    font-size: 13px;
+    background-color: rgb(200, 185, 0);
+    text-align: center;
+    color: black;
+}
+.downloadlist>li>a>:hover{
+    font-weight: bold;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+.downloadlist>li div{
+    position: absolute;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    margin-top: 10px;   
+}
+.downloadlist>li.active div{
+    width: 500px;
+    height: 400px;
+    z-index: 1;
+}
+.downloadlist a>img:hover{
+    opacity: 0.5;
+}
+.Lobotomy_Corporation{
+    text-align: center;
+}
+.Lobotomy_Corporation li>a{
+    margin-top: 20px;
+}
+.Library_Of_Ruina{
+    text-align: center;
+}
+.Library_Of_Ruina li>a{
+    margin-top: 10px;
+}
+.Limbus_Company{
+    text-align: center;
+}
+.Limbus_Company li{
+    float: left;
+}
+.Limbus_Company li>a{
+    margin-top: 10px;
+    margin-left: 35px;
+}
+.writing{
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.writing.active{
+    display: block;
+}
+.writing_up{
+    width: 400px;
+    height: 300px;
+    top: 35%;
+    left: 35%;
+    position: fixed;
+    background-color: gold;
+    border-radius: 5px;
+}
+.writing_title{
+    background-color: #555555;
+    color: white;
+    height: 30px;
+}
+.writing_title li{
+    float: left;
+    margin-left: 5px;
+    line-height: 30px;
+}
+.writing_area li{
+    margin-left: 10px;
+}
+.writing_area textarea{
+    width: 380px;
+    height: 200px;
+    resize: none;
+}
+.writing_cancell{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: #999999;
+    border-radius: 5px;
+}
+.writing_cancell:hover{
+    opacity: 0.7;
+}
+.writing_upload{
+    position: absolute;
+    right: 80px;
+    bottom: 10px;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: #999999;
+    border-radius: 5px;
+}
+.writing_upload:hover{
+    opacity: 0.7;
+}
+.writing_success{
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.writing_success_body>p{
+    text-align: center;
+    line-height: 50px;
+}
+.writing_success.active{
+    display: block;
+}
+.up_writing_success{
+    width: 400px;
+    height: 70px;
+    top: 50%;
+    left: 35%;
+    position: fixed;
+    background-color: gold;
+    border-radius: 5px;
+}
+.writing_success_btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: #999999;
+    border-radius: 5px;
+}
+.writing_success_btn:hover{
+    opacity: 0.7;
+}
+.modal{
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.modal.active{
+    display: block;
+}
+.modal_title{
+    background-color: #555555;
+    color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.uptitle>p{
+    text-align: center;
+}
+.upbody>p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.modal_up{
+    width: 400px;
+    height: 300px;
+    top: 35%;
+    left: 35%;
+    position: fixed;
+    background-color: gold;
+    border-radius: 5px;
+}
+.modal_btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #999999;
+    border-radius: 5px;
+}
+.modal_btn:hover{
+    opacity: 0.7;
+}
+.modal_sns{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 5px;
+}
+.modal_sns:hover{
+    opacity: 0.6;
+}
+.CommunityModal{
+    z-index: 2;
+    position: fixed;
+    left: 40%;
+    top: 20%;
+    background-color: gray;
+    width: 400px;
+    height: 400px;
+    display: none;
+    border-radius: 10px;
+}
+.CommunityTitle{
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 0;
+}
+.CommunityBody{
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 40px;
+}
+.CommunityModal.active{
+    display: block;
+}
+
+.CommunityTitle{
+    color: black;
+    width: 400px;
+    height: 40px;
+    background-color: gold;
+    line-height:40px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.CommunityBody{
+    width: 380px;
+    height: 320px;
+    margin: 10px 10px;
+    color: white;
+    background-color: transparent;
+    outline: transparent;
+    resize: none;
+}
+
+.CommunityModalBtn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    transition: 0.5s;
+}
+
+.CommunityModalBtn:hover{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+footer{
+    width: 1200px;
+    height: 100px;
+    background-color: #444444;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.footerlogo{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.right{
+    width: 1000px;
+    height: 100px;
+    float: right;
+}
+.copy{
+    width: 800px;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    float: left;
+}
+
+.link {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.back{
+    width: 150px;
+    height: 25px;
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 25px;
+    color: black;
+    background-color: gold;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.back:hover{
+    scale: 1.1;
+}

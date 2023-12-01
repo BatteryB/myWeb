@@ -1,0 +1,215 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    border: rgba(0, 0, 0 , 0);
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+body{
+    position: relative;
+    background-color: beige;
+}
+
+button{
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.li-border{
+    border-top: rgba(0, 0, 0, 0.4) 1px solid;
+    cursor: pointer;
+}
+
+.checked-list{
+    text-decoration: line-through;
+    font-style: italic;
+    color: lightslategray;
+}
+
+.tip{
+    width: 800px;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 10px;
+}
+
+
+#Title{
+    width: 100%;
+    height: 100px;
+}
+
+#Title p{
+    margin: 0 300px;
+    font-size: 70px;
+    color: burlywood;
+    font-weight: bold;
+}
+
+#Todos{
+    margin-top: 150px;
+    width: 800px;
+    height: auto;
+}
+
+#Main{
+    width: 800px;
+    height: auto;
+    border: solid 1px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+#Main input{
+    width: 800px;
+    height: 50px;
+    background-color: gainsboro;
+    outline: none;
+    border: none;
+}
+
+#Main>form>ul>li{
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+#TodosList input[type=checkbox]{
+    display: none;
+}
+
+#TodosList input[type=text] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 1;
+}
+
+i{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    float: left;
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#TodosList input[type=checkbox]:hover + i {
+    background-image: url("images/todos/체크마크.png");
+    background-color: greenyellow;
+    z-index: 2;
+    opacity: 0.5;
+}
+
+#TodosList input[type=checkbox]:checked + i {
+    z-index: 2;
+    background-image: url("images/todos/ico-delete.png");
+    background-color: greenyellow;
+}
+
+#Info{
+    width: 800px;
+    height: 50px;
+}
+
+#listCount{
+    float: left;
+    line-height: 50px;
+    margin-left: 5px;
+}
+
+#clearAll, #clearCompleted {
+    float: right;
+    margin-top: 10px;
+    margin-right: 3px;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#clearAll:hover, #clearCompleted:hover {
+    text-decoration: underline  ;
+}
+
+#filter button{
+    transition: 0.5s;
+    padding: 5px;
+    margin-right: 3px;
+    margin-left: 0;    ;
+}
+
+#filter button:hover{
+    text-decoration: underline;
+}
+
+#Info>ul{
+    float: left;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    margin-left: 220px;
+}
+
+#Info>ul>li{
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.deleted{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 10px;
+    top: 25px;
+    border: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+}
+
+.deleted>img{
+    width: 35px;
+    height: 35px;
+}
+
+
+#back{
+    width: 800px;
+    text-align: center;
+    color: darkgoldenrod;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#back:hover{
+    transform: scale(1.2);
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Moon</title>
+    <link href="css/projectmoon_style.css" rel="stylesheet">
+    <link href="css/projectmoon_character.css" rel="stylesheet">
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/projectmoon_javascript.js" defer type="text/javascript"></script>
+    <script src="script/projectmoon_indexLogin.js" defer  type="text/javascript"></script>
+    <script src="script/projectmoon_character.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="headerlogo">
+                <a href="projectmoon_main.html"><img src="images/hrader/headerlogo.png" alt="logo"></a>
+            </div>
+            <div class="menu">
+                <ul class="navi">
+                    <li><a href="#">Games</a>
+                        <ul class="submenu">
+                            <li><a target="_blank" href="https://store.steampowered.com/app/568220/Lobotomy_Corporation__Monster_Management_Simulation/"> Lobotomy Corporation</a></li>
+                            <li><a target="_blank" href="https://store.steampowered.com/app/1256670/Library_Of_Ruina/"> Library of Ruina</a></li>
+                            <li class="lastsubmenu"><a target="_blank" href="https://store.steampowered.com/app/1973530/Limbus_Company/">Limbus Company</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">World Viewer</a>
+                        <ul class="submenu">    
+                            <li class="submenu"><a href="projectmoon_world.html">World</a></li>
+                            <li class="lastsubmenu"><a href="projectmoon_character.html">Character</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><button class="back" onclick="clickBack()">메인으로 돌아가기</button></li>
+                    <li><button class="login" id="login1" onclick="loadLogin()">로그인하기</button></li>
+                    <li><button class="logout" id="logout1" onclick="changeIsLogin()">로그아웃하기</button></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="Q">?
+            <div id="A">
+                상단 중앙에 있는 게임 아이콘을 클릭해서 해당 게임의 화면으로 이동한 후<br>
+                캐릭터 버튼을 클릭하면 캐릭터의 설명이 나옵니다.
+            </div>
+        </div>
+
+
+        <section>
+            <div id="game">
+                <ul id="gameList">
+                    <li id="LOB" class="active">
+                        <a href="#"><img src="images/character/LOB.png" alt="롭톰"></a>
+                        <div id="LOBinfo">
+                            <div>
+                                <img src="images/character/세피로트의_나무.png" alt="세피로트의 나무">
+                                <div id="department">
+                                    <a datatype="mal" class="LOBInfoBtn" id="LOBmal" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/malkuth.png" alt="말쿠트">
+                                        <input class="LOBCharacter" type="hidden" value="mal">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBhod" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/hod.png" alt="호드">
+                                        <input class="LOBCharacter" type="hidden" value="hod">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOByes" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/yesod.png" alt="예소드">
+                                        <input class="LOBCharacter" type="hidden" value="yes">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBnet" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/netzach.png" alt="네짜흐">
+                                        <input class="LOBCharacter" type="hidden" value="net">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBtip" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/tiphereth.png" alt="티페리트">
+                                        <input class="LOBCharacter" type="hidden" value="tip">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBche" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/chesed.png" alt="헤세드">
+                                        <input class="LOBCharacter" type="hidden" value="che">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBgeb" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/gebura.png" alt="게부라">
+                                        <input class="LOBCharacter" type="hidden" value="geb">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBhok" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/hokma.png" alt="호크마">
+                                        <input class="LOBCharacter" type="hidden" value="hok">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBbin" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/binah.png" alt="비나">
+                                        <input class="LOBCharacter" type="hidden" value="bin">
+                                    </a>
+
+                                    <a class="LOBInfoBtn" id="LOBket" href="#"><img class="CharacterBtn" src="images/character/Lobotomy_Corporation/kether.png" alt="케테르">
+                                        <input class="LOBCharacter" type="hidden" value="ket">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="LOR"><a href="#"><img src="images/character/LOR.png" alt="라오루"></a>
+                        <div id="LORinfo">
+                            <img src="images/character/도서관.png" alt="도서관">
+                            <div id="floor">
+                                <a class="LORInfoBtn" id="LORmal" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/말쿠트.png" alt="말쿠트">
+                                    <input class="LORCharacter" type="hidden" value="mal">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORyes" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/예소드.png" alt="예소드">
+                                    <input class="LORCharacter" type="hidden" value="yes">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORhod" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/호드.png" alt="호드">
+                                    <input class="LORCharacter" type="hidden" value="hod">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORnet" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/네짜흐.png" alt="네짜흐">
+                                    <input class="LORCharacter" type="hidden" value="net">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORtip" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/티페리트.png" alt="티페리트">
+                                    <input class="LORCharacter" type="hidden" value="tip">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORgeb" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/게부라.png" alt="게부라">
+                                    <input class="LORCharacter" type="hidden" value="geb">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORche" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/헤세드.png" alt="헤세드">
+                                    <input class="LORCharacter" type="hidden" value="che">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORbin" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/비나.png" alt="비나">
+                                    <input class="LORCharacter" type="hidden" value="bin">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORhok" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/호크마.png" alt="호크마">
+                                    <input class="LORCharacter" type="hidden" value="hok">
+                                </a>
+
+                                <a class="LORInfoBtn" id="LORket" href="#"><img class="CharacterBtn" src="images/character/Library_Of_Ruina/케테르.png" alt="롤랑">
+                                    <input class="LORCharacter" type="hidden" value="ket">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li id="LCB"><a href="#"><img src="images/character/LCB.png" alt="림버스"></a>
+                        <div id="LCBinfo">
+                            <img src="images/character/수감자.png" alt="수감자">
+                            <div id="prisoner">
+                                <a class="LCBInfoBtn" id="LCByis" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/이상.png" alt="이상">
+                                    <input class="LCBCharacter" type="hidden" value="yis">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBfau" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/파우스트.png" alt="파우스트">
+                                    <input class="LCBCharacter" type="hidden" value="fau">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBdon" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/돈키호테.png" alt="돈키호테">
+                                    <input class="LCBCharacter" type="hidden" value="don">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBryo" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/료슈.png" alt="료슈">
+                                    <input class="LCBCharacter" type="hidden" value="ryo">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBmeu" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/뫼르소.png" alt="뫼르소">
+                                    <input class="LCBCharacter" type="hidden" value="meu">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBhon" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/홍루.png" alt="홍루">
+                                    <input class="LCBCharacter" type="hidden" value="hon">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBhea" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/히스클리프.png" alt="히스클리프">
+                                    <input class="LCBCharacter" type="hidden" value="hea">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBish" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/이스마엘.png" alt="이스마엘">
+                                    <input class="LCBCharacter" type="hidden" value="ish">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBrod" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/로쟈.png" alt="로쟈">
+                                    <input class="LCBCharacter" type="hidden" value="rod">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBsin" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/싱클레어.png" alt="싱클레어">
+                                    <input class="LCBCharacter" type="hidden" value="sin">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBout" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/오티스.png" alt="오티스">
+                                    <input class="LCBCharacter" type="hidden" value="out">
+                                </a>
+
+                                <a class="LCBInfoBtn" id="LCBgre" href="#"><img class="CharacterBtn" src="images/character/Limbus_Company/그레고르.png" alt="그레고르">
+                                    <input class="LCBCharacter" type="hidden" value="gre">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div id="LOBCharacterInfo">
+            <img id="LOBCharImg" src="" alt="CharImg">
+            <img id="LOBBackImg" src="" alt="BackImg">
+            <p id="LOBCharacterName"></p>
+            <p id="LOBDept"></p>
+            <p id="LOBOver"></p>
+            <button class="infoClose">X</button>
+        </div>
+
+
+        <div id="LORCharacterInfo">
+            <img id="LORCharImg" src="" alt="CharImg">
+            <img id="LORBackImg" src="" alt="BackImg">
+            <img id="LORIconImg" src="" alt="IconImg">
+            <p id="LORCharacterName"></p>
+            <p id="LORFloor"></p>
+            <p id="LOROver"></p>
+            <button class="infoClose">X</button>
+        </div>
+
+
+        <div id="LCBCharacterInfo">
+            <img id="LCBCharImg" src="" alt="CharImg">
+            <p id="LCBNumber"></p>
+            <p id="LCBCharacterName"></p>
+            <button class="infoClose">X</button>
+        </div>
+    </div>
+</body>
+</html>

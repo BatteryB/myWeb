@@ -1,0 +1,406 @@
+#Q{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    background-color: gold;
+    border: black 1px solid;
+    border-radius: 20px;
+    top: 70px;
+    right: 200px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+#Q:hover{
+    background-color: black;
+    color: gold;
+    border: solid 1px white;
+}
+
+#Q:hover #A{
+    display: block;
+    color: black;
+}
+
+#A{
+    display: none;
+    width: 550px;
+    height: 100px;
+    background-color: white;
+    border: 1px black solid;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+}
+
+.main{
+    height: 700px;
+    position: relative;
+}
+
+#game{
+    width: 1200px;
+    height: 600px;
+    position: relative;
+}
+
+#gameList{
+    width: 1200px;
+    height: 600px;
+}
+
+#gameList>li>a{
+    float: left;
+    margin-left: 10px;
+}
+
+#gameList>li>a img{
+    transition: 0.5s;
+}
+
+#gameList>li:first-child>a{
+    margin-left: 530px;
+}
+
+#gameList>li>a:hover img{
+    transform: scale(1.2);
+}
+
+#gameList>li>a>img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#gameList>li>div{
+    width: 1200px;
+    height: 560px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    display: none;
+}
+
+#gameList>li.active div{
+    display: block;
+}
+
+#LOBinfo{
+    background-color: black;
+}
+#LOBinfo>div{
+    position: relative;
+    margin: 0 auto;
+    width: 315px;
+}
+
+#LOBinfo>div>img{
+    width: 315px;
+    display: block;
+}
+
+#LORinfo{
+    background-color: black;
+    position: relative;
+}
+#LORinfo>div{
+    position: relative;
+    margin: 0 auto;
+}
+
+#LORinfo>img{
+    height: 560px;
+    display: block;
+    position: relative;
+}
+
+#LCBinfo{
+    background-color: black;
+    position: relative;
+}
+
+#LCBinfo>img{
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.CharacterBtn{
+    display: block;
+}
+
+.InfoImg{
+    display: block;
+}
+
+.LOBCharImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*소개 버튼 위치*/
+/*롭톰*/
+#department>a{
+    position: absolute;
+    transition: 0.5s cubic-bezier(0, 0.7, 0.4, 1.1);;
+}
+
+#department img{
+    width: 70px;
+    height: 70px;
+}
+
+#department>a:hover{
+    transform: scale(1.1);
+}
+
+#LOBmal{top: 18px; left: 123px;}
+#LOBhod{top: 175px; left: 226px;}
+#LOByes{top: 130px; left: 123px;}
+#LOBnet{top: 176px; left: 20px;}
+#LOBtip{top: 259px; left: 123px;}
+#LOBche{top: 316px; left: 20px;}
+#LOBgeb{top: 316px; left: 226px;}
+#LOBhok{top: 416px; left: 20px;}
+#LOBbin{top: 416px; left: 226px;}
+#LOBket{top: 477px; left: 123px;}
+
+/*라오루*/
+#floor>a{
+    position: absolute;
+    transition: 0.5s cubic-bezier(0, 0.7, 0.4, 1.1);;
+}
+
+#floor>a:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+#floor img{
+    width: 117.5px;
+}
+
+#LORmal{width: 118px; top: -170px; left: 664px;}
+#LORyes{top: -205px; left: 671px;}
+#LORhod{top: -243px; left: 666px;}
+#LORnet{top: -281px; left: 671px;}
+#LORtip{top: -316px; left: 667px;}
+#LORgeb{top: -353px; left: 668px;}
+#LORche{top: -394px; left: 668px;}
+#LORbin{top: -430px; left: 672px;}
+#LORhok{top: -468px; left: 669px;}
+#LORket{top: -503px; left: 664px;}
+
+
+/*림버스*/
+#prisoner>a{
+    position: absolute;
+    transition: 0.5s cubic-bezier(0, 0.7, 0.4, 1.1);;
+}
+
+#prisoner>a>img{
+    width:80px;
+}
+
+#prisoner>a:hover{
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+#LCByis{top: 60px; left: 128px;}
+#LCBfau{top: 60px; left: 206px;}
+#LCBdon{top: 60px; left: 286px;}
+#LCBryo{top: 60px; left: 364px;}
+#LCBmeu{top: 60px; left: 439px;}
+#LCBhon{top: 60px; left: 519px;}
+#LCBhea{top: 60px; left: 599px;}
+#LCBish{top: 60px; left: 679px;}
+#LCBrod{top: 60px; left: 759px;}
+#LCBsin{top: 60px; left: 839px;}
+#LCBout{top: 60px; left: 919px;}
+#LCBgre{top: 60px; left: 999px;}
+
+/*팝업*/
+#LOBCharacterInfo,
+#LORCharacterInfo,
+#LCBCharacterInfo{
+    z-index: 10;
+    position: fixed;
+    color: white;
+    top: 60px;
+    left: 168px;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+#LOBCharacterInfo.active,
+#LORCharacterInfo.active,
+#LCBCharacterInfo.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.infoClose{
+    width: 50px;
+    height: 50px;
+    background-color: gold;
+    color: black;
+    position: absolute;
+    top:30px;
+    left: 1120px;
+    z-index: 20;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.infoClose:hover{
+    background-color: black;
+    color: gold;
+}
+
+/*팝업 로보토미*/
+#LOBBackImg{
+    position: absolute;
+    width: 1200px;
+    z-index: 11;
+}
+
+#LOBCharImg{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 250px;
+    z-index: 12;
+}
+
+#LOBCharacterName{
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    left: 500px;
+    z-index: 13;
+    color: white;
+    font-weight: bold;
+}
+
+#LOBDept{
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    left: 500px;
+    z-index: 13;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*팝업 라오루*/
+#LORBackImg{
+    position: absolute;
+    width: 1200px;
+    z-index: 11;
+}
+
+#LORCharImg{
+    position: absolute;
+    top: 0;
+    left: 800px;
+    width: 250px;
+    z-index: 12;
+}
+
+#LORCharacterName{
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    left: 500px;
+    z-index: 13;
+    color: white;
+    font-weight: bold;
+}
+
+#LORFloor{
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    left: 500px;
+    z-index: 13;
+    color: white;
+    font-weight: bold;
+}
+
+#LORIconImg{
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    width: 100px;
+    z-index: 13;
+ }
+
+/*림버스 팝업*/
+
+#LCBCharImg{
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 400px;
+    z-index: 12;
+}
+
+#LCBCharacterName{
+    position: absolute;
+    bottom: 10px;
+    width: 300px;
+    z-index: 13;
+    color: white;
+    font-weight: bold;
+    
+}
+
+#LCBNumber {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    left: 500px;
+    z-index: 13;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+#LOBCharacterName,
+#LOBDept,
+#LORCharacterName,
+#LORFloor,
+#LCBcharacterName,
+#LCBNumber{
+    color: black;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#LOBOver{
+    position: absolute;
+    left: 550px;
+    top: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+    overflow-y: auto;
+    z-index: 13;
+    color: black;
+    width: 500px;
+    height: 300px;
+}

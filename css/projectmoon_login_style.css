@@ -1,0 +1,78 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.main{
+    text-align: center;
+    width: 1200px;
+    height: 860px;
+}
+
+.logo{
+    width: 200px;
+    height: 230px;
+}
+.login{
+    width: 270px;
+    height: 150px;
+}
+.input li{
+    margin-top: 20px;
+}
+.input li>p{
+    color: white;
+}
+.menu{
+    width: 270px;
+    height: 60px;
+}
+.login_now{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    color: gray;
+    background-color: gold;
+    border-radius: 10px;
+}
+.login_now:hover{
+    background-color: gray;
+    color: gold;
+    font-weight: bold;
+}
+.no{
+    width: 100px;
+    height: 10px;
+    margin-top: 5px;
+    color: blue;
+    font-size: 10px;
+}
+.no:hover{
+    color: orange;
+}
+
+#girok{
+    position: fixed;
+    z-index: 999;
+}
+
+#girokBack {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#girokChar {
+
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos-List</title>
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/todos_app.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/todos/icon.png">
+    <link rel="stylesheet" href="css/todos_app.css">
+    <link rel="stylesheet" href="css/todos_normalize.css">
+</head>
+<body>
+<div id="Todos">
+    <div id="Title">
+        <p>Todos</p>
+    </div>
+    <div id="Main">
+        <form accept-charset="UTF-8">
+            <input id="todoInput" maxlength="40" autocomplete="off" placeholder="해야할 일을 입력해주세요.">
+            <ul id="TodosList"></ul>
+        </form>
+        <div class="li-border" id="Info">
+            <p id="listCount">리스트 갯수 : 0</p>
+            <ul id="filter">    
+                <li><button id="All">ALL</button></li>
+                <li><button id="Active">Active</button></li>
+                <li><button id="Completed">Completed</button></li>
+            </ul>
+            <button id="clearAll">Clear All</button><button id="clearCompleted">Clear Completed</button>
+        </div>
+    </div>
+    <p class="tip">최대 작성 가능 글자 수는 40자 입니다.</p>
+    <p class="tip">더블 클릭 시 리스트 수정</p>
+    <p><a href="main.html" id="back">메인으로 돌아가기</a></p>
+</div>
+</body>
+</html>
